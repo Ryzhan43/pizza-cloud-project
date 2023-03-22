@@ -3,6 +3,7 @@ package com.cydeo.pizzacloud.controller;
 import com.cydeo.pizzacloud.model.Pizza;
 import com.cydeo.pizzacloud.model.PizzaOrder;
 import com.cydeo.pizzacloud.repository.PizzaRepository;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +12,7 @@ import java.util.UUID;
 
 @Controller
 @RequestMapping("/orders")
+@Component
 public class OrderController {
 
     private final PizzaRepository pizzaRepository;
