@@ -35,13 +35,13 @@ public class OrderController {
         return "/orderForm";
     }
 
+
     @PostMapping("/{pizzaId}")
-    public String processOrder(UUID pizzaId, PizzaOrder pizzaOrder) {
+    public String processOrder(@PathVariable UUID pizzaId,@ModelAttribute("pizzaOrder") PizzaOrder pizzaOrder) {
 
         // Save the order
-
-
         pizzaOrder.setPizza(getPizza(pizzaId));
+        System.out.println("asdasdasdas");
         return "redirect:/home";
     }
 
